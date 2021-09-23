@@ -41,7 +41,8 @@ const exitHandler = () => {
 
 const unexpectedErrorHandler = (error) => {
   console.error(error);
-  exitHandler();
+  // stop error handler for testing reasons
+  // exitHandler();
 };
 
 process.on('uncaughtException', unexpectedErrorHandler);

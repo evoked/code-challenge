@@ -1,0 +1,60 @@
+# you can find client to run HTTP requests here: https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+# highlight each request, right click, and send request 
+
+# first request
+POST http://localhost:5002/api/user/new_user HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "222"
+}
+
+
+
+# replace author with id returned on new user creation
+POST http://localhost:5002/api/survey/new
+Content-Type: application/json
+
+{
+    "title": "blah",
+    "questions": [ {
+        "question": "zzz",
+        "answer": "aaa"
+    }
+    ],
+    "author": "614b011810713405a9379ab0"
+}
+
+GET http://localhost:5002/api/user/all
+Content-Type: application/json
+
+{
+}
+
+GET http://localhost:5002/api/user/222 HTTP/1.1
+Content-Type: application/json
+
+{
+}
+
+# replace survey id with id returned on post creation
+# POST http://localhost:5002/api/survey/614b011810713405a9379ab0/delete
+
+
+POST http://localhost:5002/api/survey/:id/delete
+Content-Type: application/json
+
+{
+}
+
+POST http://localhost:5002/api/survey/:id/update
+Content-Type: application/json
+
+{
+    "title": "blah",
+    "questions": [ {
+        "question": "12312321321",
+        "answer": "3333"
+    }
+    ]
+}

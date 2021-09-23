@@ -19,6 +19,7 @@ app.use(cors());
 app.get('/test', (_, res) => res.status(200).send('Hello world'));
 
 // Routes
-app.use('/api/users', require('./routes/users'));
+app.use('/api/user', require('./routes/users'));
+app.use('/api/survey', require('./routes/surveys'));
 
 module.exports = app;
